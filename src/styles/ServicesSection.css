@@ -1,0 +1,87 @@
+.services-section {
+  background-color: black; 
+  padding: 5px 120px; /* Increased padding for the whole service page */
+  text-align: center;
+  color: white; /* Text color set to white */
+}
+
+.services-section h2 {
+  margin-bottom: 20px; /* Add some padding after the services heading */
+}
+
+.services-section p {
+  margin-bottom: 40px; /* Additional margin for separation from the service boxes */
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px; /* Gap between service boxes */
+  padding: 15px;
+  justify-items: center;
+}
+
+.service-item {
+  background: #BFF250;
+  padding: 30px; /* Reduced padding for smaller boxes */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: black;
+  position: relative;
+  width: 60%; /* Set a specific width to reduce box size */
+  max-width: 300px; /* Optional: limit the maximum width of the boxes */
+  transition: transform 0.3s ease; /* Add a subtle scaling effect */
+}
+
+/* Hover effect for better interactivity */
+.service-item:hover {
+  transform: scale(1.05); /* Slightly scale up on hover */
+}
+.service-item:nth-child(4),
+.service-item:nth-child(5) {
+  justify-self: center; /* Center these specific items */
+}
+.icon-placeholder {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto 20px;
+  background-position: center;
+  background-size: cover;
+}
+
+.service-details {
+  display: none; /* Hidden by default */
+  background: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  /* padding: 10px; */
+  color: white;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  opacity: 0; /* Start as invisible */
+  transition: opacity 0.3s ease; /* Transition effect */
+}
+
+.service-item.active .service-details {
+  display: block; /* Ensure it displays as block when active */
+  opacity: 1; /* Make visible */
+}
+@media (max-width: 768px) {
+  .service-grid {
+    grid-template-columns: 1fr; /* Stack items vertically on smaller screens */
+  }
+
+  .service-item {
+    padding: 15px; /* Adjust padding for smaller items */
+  }
+
+  .service-details {
+    max-height: 100px; /* Reduce max height for smaller screens */
+  }
+}
+

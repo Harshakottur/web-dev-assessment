@@ -1,0 +1,181 @@
+/* General header styling */
+.header {
+  background: black;
+  color: white;
+  padding: 60px 40px; /* More padding around the header */
+}
+
+/* Navigation bar */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px; /* Padding for space within the nav */
+}
+
+/* Menu items aligned to the right */
+.menu {
+  display: flex;
+  list-style: none;
+  margin-left: 50%; /* Ensures menu is aligned right */
+}
+
+.menu li {
+  margin-left: 20px;
+  color: white;
+}
+
+.cta-button {
+  padding: 15px 30px;
+  border-radius: 8px;
+  font-weight: bold;
+  background-color: #BFF250;
+  color: black;
+}
+
+/* Hero section styling */
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  margin-top: 40px;
+  padding: 60px; /* Add more padding to the hero section */
+  background-color: black;
+  color: white;
+  z-index: 2; /* Ensure the content stays on top */
+}
+
+/* Icon background shadow */
+.icon-background {
+  width: 280px; /* Adjust as needed */
+  height: 280px; /* Adjust as needed */
+  background-color: rgba(191, 242, 90, 0.5); /* Smoky effect color */
+  border-radius: 10%; /* Make it circular */
+  position: absolute; /* Position it correctly */
+  z-index: 2; /* Set it above the icon */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  filter: blur(120px); /* Creates a smoky effect */
+  top: 30%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%);
+}
+
+/* Hero icon */
+.hero-icon {
+  width: 26%; /* Adjust as needed */
+  height: 60%; /* Maintain aspect ratio */
+  position: absolute;
+  z-index: 1; /* Ensure the icon is behind the smoke */
+  top: 30%; /* Center the icon vertically */
+  left: 50%; /* Center the icon horizontally */
+  transform: translate(-50%, -50%);
+  opacity: 0.5;
+}
+
+
+.hero-content h1 {
+  font-size: 3rem;
+  color: white;
+  position: relative;
+  z-index: 3; 
+  line-height: 1.2;
+}
+
+.hero-content h1 .highlight {
+  color: #BFF250;
+}
+
+.hero-content h1 span.break {
+  display: block;
+}
+.break {
+  display: block;
+}
+.hero-content p {
+  margin-top: 20px;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.67);
+  position: relative;
+  z-index: 3;
+}
+.trusted-heading {
+  text-transform: uppercase; /* Makes the text all caps */
+  font-size: 1rem; /* Adjust size as needed */
+  text-align: center;
+  color: white; /* Text color, can be changed as needed */
+  position: relative;
+  margin: 20px 0;
+  z-index: 3;
+}
+
+.trusted-heading::before,
+.trusted-heading::after {
+  content: '';
+  display: inline-block;
+  width: 60px; /* Length of the line */
+  height: 2px; /* Thickness of the line */
+  background-color: #BFF250; /* Line color */
+  position: absolute;
+  top: 50%; /* Align line vertically in the middle of the text */
+}
+
+.trusted-heading::before {
+  left: -35%; /* Line on the left side */
+}
+
+.trusted-heading::after {
+  right: -35%; /* Line on the right side */
+}
+
+
+/* Button container */
+.buttons {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* Start button */
+.start-btn {
+  padding: 15px 30px;
+  border-radius: 8px;
+  font-weight: bold;
+  background-color: #BFF250;
+  color: black;
+  border: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  z-index: 3;
+}
+.icon-bar {
+  background-color: rgba(128, 128, 128, 0.2); /* Transparent grey background */
+  border-radius: 12px; /* Rounded corners */
+  padding: 15px; /* Padding for the icon bar */
+  display: flex;
+  justify-content: space-around; /* Space out the items evenly */
+  align-items: center; /* Align items vertically */
+  width: 60%; /* Ensures the icon bar stretches across the page */
+}
+
+.icon-item {
+  display: flex;
+  flex-direction: row; /* Align the icon and text in a row (side by side) */
+  justify-content: center; /* Center them horizontally */
+  align-items: center; /* Center them vertically */
+}
+
+.icon-item img {
+  width: 50px; /* Larger icon width */
+  height: 50px; /* Larger icon height */
+  margin-right: 6px; /* Add spacing between the icon and the text */
+}
+
+.icon-item span {
+  font-size: 12px; /* Adjust text size */
+  color: white; /* Text color */
+  font-weight: bold;
+}

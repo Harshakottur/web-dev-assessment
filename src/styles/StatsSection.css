@@ -1,0 +1,59 @@
+/* styles/StatsSection.css */
+.stats-section {
+  padding: 50px 20px;
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+
+.stats-title {
+  font-size: 2.5em;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  gap: 40px;
+  padding: 20px 0;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.stat-icon {
+  width: 100px;           /* Diameter of the circle */
+  height: 100px;          /* Diameter of the circle */
+  background-color: #BFF250; /* Background color */
+  display: flex;          /* Use flexbox to center the icon */
+  align-items: center;    /* Center the icon vertically */
+  justify-content: center; /* Center the icon horizontally */
+  border-radius: 50%;     /* Make it circular */
+  overflow: hidden;       /* Hide overflow */
+}
+
+svg {
+  width: 100%;            /* Make the image fill the container */
+  height: 100%;           /* Make the image fill the container */
+  object-fit: cover;      /* Ensure the image covers the area without distortion */
+  color: black;
+}
+
+
+.stat-description {
+  font-size: 1.2em;
+  text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+}

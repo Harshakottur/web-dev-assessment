@@ -1,0 +1,118 @@
+.testimonial {
+  padding: 20px 20px;
+  background-color: white;
+  color: black;
+  text-align: center;
+}
+
+.testimonial-title {
+  font-size: 2.5em;
+  font-weight: bold;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.testimonial-subtitle {
+  font-size: 1em;
+  margin-bottom: 30px;
+}
+
+.testimonial-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Changed to space-between */
+  background-color: rgba(245, 245, 245, 0.7);
+  border-radius: 15px;
+  padding: 30px;
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+  border: 1px solid rgb(177, 177, 177);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.testimonial-details {
+  flex: 1;
+  text-align: left;
+  padding: 0 30px;
+}
+
+.company-info {
+  display: flex;
+  align-items: center;
+}
+
+.company-logo {
+  max-width: 100px;
+  margin-right: 10px;
+}
+
+.testimonial-text {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.testimonial-quote {
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.testimonial-author {
+  font-weight: bold;
+}
+
+.testimonial-photo {
+  width: 150px;
+  height: 150px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  margin-left: 30px; /* Add space between content and photo */
+}
+
+.arrows {
+  display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: calc(100% + 130px);
+    left: -70px;
+}
+
+.arrow {
+  cursor: pointer;
+  font-size: 2em;
+  background-color: #fff9f985;
+  color: #000000;
+  border-radius: 50%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s;
+}
+
+.arrow:hover {
+  transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+  .testimonial-content {
+    flex-direction: column;
+  }
+  .testimonial-details {
+    text-align: center;
+    padding: 0;
+    margin-bottom: 20px;
+  }
+  .testimonial-photo {
+    margin-top: 20px;
+    margin-left: 0; /* Remove left margin on small screens */
+  }
+  .arrows {
+    width: 100%; /* Full width on small screens */
+    left: 0;
+  }
+}
